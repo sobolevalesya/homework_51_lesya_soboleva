@@ -1,0 +1,24 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello</h1>
+<h3>{{ articles }}</h3>
+{% for article in articles %}
+    <div>
+    <h4>{{ article.title }}</h4>
+    <p>{{ article.content }}</p>
+        <a href="#">{{ article.author }}</a>
+    </div>
+
+{% endfor %}
+
+{#<img src="{% static 'img/palms.jpg' %}" alt="">#}
+</body>
+</html>
